@@ -1,6 +1,6 @@
 {
   "name": "autocomplete-nunjucks",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "autocomplete+ provider for nunjucks",
   "main": ".lib/main.coffee",
   "scripts": {
@@ -12,12 +12,13 @@
   },
   "keywords": [
     "nunjucks",
+    "autocomplete",
     "autocomplete-plus",
     "autocomplete+",
     "atom"
   ],
   "engines": {
-    "atom": ">=1.0.0"
+    "atom": ">=0.174.0"
   },
   "providedServices": {
     "autocomplete.provider": {
