@@ -1,7 +1,7 @@
 {
   "name": "autocomplete-nunjucks",
   "version": "0.1.5",
-  "description": "autocomplete plus provider for nunjucks",
+  "description": "autocomplete+ provider for nunjucks",
   "main": "main.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
