@@ -1,0 +1,32 @@
+{
+  "name": "autocomplete-nunjucks",
+  "version": "0.1.5",
+  "description": "autocomplete plus provider for nunjucks",
+  "main": "main.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puranjayjain/autocomplete-nunjucks.git"
+  },
+  "keywords": [
+    "nunjucks",
+    "autocomplete-plus",
+    "autocomplete+",
+    "atom"
+  ],
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "provide"
+      }
+    }
+  },
+  "author": "Puranjay Jain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/puranjayjain/autocomplete-nunjucks/issues"
+  },
+  "homepage": "https://github.com/puranjayjain/autocomplete-nunjucks#readme"
+}
