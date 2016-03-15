@@ -2,9 +2,8 @@
 Autocomplete+ provider for atom
 
 #Note
-This package is still in development phase and might break occasionally. 
+The might break occasionally. So, report any issues.
 
-Please bear with it contribute!
+Also, any suggestions are welcome!
 
-#Dependency
-Requires [language-nunjucks](https://github.com/alohaas/language-nunjucks) to work
+Feel free to contribute!

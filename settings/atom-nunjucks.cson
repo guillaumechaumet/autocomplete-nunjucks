@@ -1,0 +1,9 @@
+'.text.html.nunjucks':
+  'editor':
+    'commentStart': '{# '
+    'commentEnd': ' #}'
+  autocomplete:
+    symbols:
+      typename1:
+        selector: '.some, .selectors'
+        typePriority: 1
