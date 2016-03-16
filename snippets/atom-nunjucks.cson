@@ -6,12 +6,12 @@
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#block'
   'Complete Block':
     'prefix': '{%'
-    'body': '{% $0 %}'
+    'body': '{% $0 %'
     'description': 'A nunjucks template block.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/'
   'Complete Variable':
     'prefix': '{{'
-    'body': '{{ ${1:variable} }}'
+    'body': '{{ ${1:variable} '
     'description': 'A variable looks up a value from the template context.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#variables'
   'Extends':
@@ -22,7 +22,7 @@
   'Include':
     'prefix': 'include'
     'body': '{% include ${1:"${2:template}"} %}'
-    'description': 'include pulls in other templates in place. It\'s useful when you need to share smaller chunks across several templates that already inherit other templates.'
+    'description': 'Include pulls in other templates in place.It\'s useful when you need to share smaller chunks across several templates that already inherit other templates.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#include'
   'Filter':
     'prefix': 'filter'
@@ -46,27 +46,27 @@
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#asyncall'
   'If':
     'prefix': 'if'
-    'body': '{% if ${1:expr} %}\n\t$2\n{% endif %}'
+    'body': '{% if ${1:condition} %}\n\t$2\n{% endif %}'
     'description': 'if tests a condition and lets you selectively display content. It behaves exactly as javascript\'s if behaves.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#if'
   'If Else':
     'prefix': 'ife'
-    'body': '{% if ${1:expr} %}\n\t$2\n{% else %}\n\t$3\n{% endif %}'
+    'body': '{% if ${1:condition} %}\n\t$2\n{% else %}\n\t$3\n{% endif %}'
     'description': 'It creates the if else block.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#if'
   'If Elif':
     'prefix': 'ifel'
-    'body': '{% if ${1:expr} %}\n\t$2\n{% elif ${3:expr} %}\n\t$4\n{% else %}\n\t$5\n{% endif %}'
+    'body': '{% if ${1:condition} %}\n\t$2\n{% elif ${3:condition} %}\n\t$4\n{% else %}\n\t$5\n{% endif %}'
     'description': 'Alternate condition with the if block'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#if'
   'Elif':
     'prefix': 'elif'
-    'body': '{% elif ${1:expr} %}\n\t$2'
+    'body': '{% elif ${1:condition} %}\n\t$2'
     'description': 'Alternate condition in the if block'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#if'
   'Else':
     'prefix': 'else'
-    'body': '{% else ${1:expr} %}\n\t$2'
+    'body': '{% else ${1:condition} %}\n\t$2'
     'description': 'Alternate condition in the if block'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#if'
   'Set':
@@ -110,77 +110,19 @@
     'description': 'You can render the contents of the parent block inside a child block by calling super.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#super'
   # Expressions
-  'And':
-    'prefix': 'and'
-    'body': 'and'
-    'description': 'Logical and operator.'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#logic'
   'Or':
     'prefix': 'or'
     'body': 'or'
     'description': 'Logical or operator.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#logic'
-  'Not':
-    'prefix': 'not'
-    'body': 'not'
-    'description': 'Logical not operator.'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#logic'
-  # Autoescaping see http://mozilla.github.io/nunjucks/templating.html#autoescaping
-  'Safe':
-    'prefix': 'safe'
-    'body': 'safe'
-    'description': 'If autoescaping is turned on in the environment, all output will automatically be escaped for safe output. To manually mark output as safe, use the safe filter.'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#autoescaping'
-  'Escape':
-    'prefix': 'escape'
-    'body': 'escape'
-    'description': 'If autoescaping is turned off, all output will be rendered as it is. You can manually escape variables with the escape filter.'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#autoescaping'
-  # Global Functions see http://mozilla.github.io/nunjucks/templating.html#global-functions
-  'Range':
-    'prefix': 'range'
-    'body': 'range(${1:start}, ${2:stop}, ${3:step})'
-    'description': 'range([start], stop, [step]) If you need to iterate over a fixed set of numbers, range generates the set for you. The numbers begin at start (default 0) and increment by step (default 1) until it reaches stop, not including it.'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#range-start-stop-step'
-  'Cycler':
-    'prefix': 'cycler'
-    'body': 'cycler(${1:item1}, ${2:itemN})'
-    'description': 'An easy way to rotate through several values is to use cycler, which takes any number of arguments and cycles through them.'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#cycler-item1-item2-itemn'
-  'Joiner':
-    'prefix': 'joiner'
-    'body': 'joiner()'
-    'description': 'When combining multiple items, it\'s common to want to delimit them with something like a comma, but you don\'t want to output the separator for the first item. The joiner class will output separator (default ",") whenever it is called except for the first time'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#joiner-separator'
-  # Builtin Filters http://mozilla.github.io/nunjucks/templating.html#builtin-filters
-  'Default':
-    'prefix': 'default'
-    'body': 'default(${1:value}, {2:default}, {3:boolean})'
-    'description': 'If value is strictly undefined, return default, otherwise value. If boolean is true, any JavaScript falsy value will return default (false, "", etc). Also, aliased as d'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#default-value-default-boolean'
-  'Sort':
-    'prefix': 'sort'
-    'body': 'sort({1:arr}, {2:reverse}, {3:caseSens}, {4:attr})'
-    'description': 'Sort arr with JavaScript\'s arr.sort function. If reverse is true, result will be reversed. Sort is case-insensitive by default, but setting caseSens to true makes it case-sensitive. If attr is passed, will compare attr from each item.'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#sort-arr-reverse-casesens-attr'
-  'Striptags':
-    'prefix': 'striptags'
-    'body': 'striptags({1:value}, {2:preserve_linebreaks})'
-    'description': 'Analog of jinja\'s striptags. If preserve_linebreaks is false (default), strips SGML/XML tags and replaces adjacent whitespace with one space. If preserve_linebreaks is true, normalizes whitespace, trying to preserve original linebreaks. Use second behavior if you want to pipe {{ text | striptags | nl2br }}. Use default one otherwise.'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#striptags-value-preserve_linebreaks'
-  'Dump':
-    'prefix': 'dump'
-    'body': 'dump({1:object})'
-    'description': 'Call JSON.stringify on an object and dump the result into the template. Useful for debugging: {{ foo | dump }}.'
-    'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#dump-object'
-  # Filter blocks
+  # # Filter blocks
   'Pipe':
-    'prefix': '|'
+    'prefix': 'pipe'
     'body': '| ${1:filter}'
     'description': 'You can pass filters from the variable directly e.g. {{ foo | escape }}'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#filters'
   # More Filters
-  # 'Safe':
+  # 'Name':
   #   'prefix': ''
   #   'body': ''
   #   'description': ''
