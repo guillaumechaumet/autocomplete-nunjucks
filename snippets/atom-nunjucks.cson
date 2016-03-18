@@ -6,7 +6,7 @@
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#block'
   'Complete Block':
     'prefix': '{%'
-    'body': '{% $0 %'
+    'body': '{% $1 %'
     'description': 'A nunjucks template block.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/'
   'Complete Variable':
@@ -71,7 +71,7 @@
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#if'
   'Set':
     'prefix': 'set'
-    'body': '{% set ${1:var} = ${2:value} %}$0'
+    'body': '{% set ${1:var} = ${2:value} %}$3'
     'description': 'set lets you create/modify a variable.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#set'
   'Macro':
@@ -81,12 +81,12 @@
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#macro'
   'Import':
     'prefix': 'import'
-    'body': '{% import ${1:"${2:template}"} as ${3:var} %}$0'
+    'body': '{% import "${1:template}" as ${2:var} %}$3'
     'description': 'import loads a different template and allows you to access its exported values. Macros and top-level assignments (done with set) are exported from templates, allowing you to access them in a different template.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#import'
   'From Import':
     'prefix': 'from'
-    'body': '{% from ${1:"${2:template}"} import ${3:macro} as ${4:var} %}$0'
+    'body': '{% from "${1:template}" import ${2:macro} as ${3:var} %}$4'
     'description': 'It imports specific values from a template into the current namespace.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#import'
   'Raw':
