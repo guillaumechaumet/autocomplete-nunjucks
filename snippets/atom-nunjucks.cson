@@ -16,12 +16,12 @@
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#variables'
   'Extends':
     'prefix': 'extends'
-    'body': '{% extends ${1:"${2:template}"} %}'
+    'body': '{% extends "${1:template}" %}$2'
     'description': 'extends is used to specify template inheritance. The specified template is used as a base template.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#extends'
   'Include':
     'prefix': 'include'
-    'body': '{% include ${1:"${2:template}"} %}'
+    'body': '{% include "${1:template}" %}$2'
     'description': 'Include pulls in other templates in place.It\'s useful when you need to share smaller chunks across several templates that already inherit other templates.'
     'descriptionMoreURL': 'http://mozilla.github.io/nunjucks/templating.html#include'
   'Filter':
