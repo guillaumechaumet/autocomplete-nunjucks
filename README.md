@@ -17,4 +17,4 @@ Also, any suggestions are welcome!
 Feel free to contribute!
 
 ## License
-Licensed under the MIT [License](https://raw.githubusercontent.com/puranjayjain/autocomplete-nunjucks/master/LICENSE)
+Licensed under the [MIT License](https://raw.githubusercontent.com/puranjayjain/autocomplete-nunjucks/master/LICENSE)
