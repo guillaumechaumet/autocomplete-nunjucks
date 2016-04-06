@@ -1,5 +1,8 @@
-# language-nunjucks
+# autocomplete-nunjucks
 Autocomplete+ provider for atom
+
+## Language support
+The language support for package is now at [atom-language-nunjucks](https://github.com/puranjayjain/atom-language-nunjucks)
 
 ## Working sample
 
