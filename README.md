@@ -1,5 +1,5 @@
 # autocomplete-nunjucks
-Autocomplete+ provider for atom
+Autocomplete+ provider for nunjucks templating engine for atom text editor
 
 ## Language support
 The language support for package is at [language-nunjucks](https://github.com/alohaas/language-nunjucks)
